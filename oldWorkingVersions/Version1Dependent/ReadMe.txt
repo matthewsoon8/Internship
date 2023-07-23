@@ -1,0 +1,1 @@
+The arduino is dependent on the python code to run

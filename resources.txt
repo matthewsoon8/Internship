@@ -1,0 +1,27 @@
+FSR sensors youtube tutorial
+https://www.youtube.com/watch?v=eW3SQCi0aTE
+
+
+
+Finding Arduino Com port python
+https://www.youtube.com/watch?v=DJD28uK5qIk
+
+Arduino Python real time plot. Serial Comunication
+https://www.youtube.com/watch?v=z14l33paZGU
+
+
+
+Triangle \Calculator
+https://www.calculator.net/triangle-calculator.html
+
+Creating Executables on python
+https://www.tomshardware.com/how-to/create-python-executable-applications
+
+Polar to cartesian calculator
+https://keisan.casio.com/exec/system/1223527679
+
+matplotlib Examples
+https://matplotlib.org/stable/api/markers_api.html
+
+Pandas resources
+https://www.geeksforgeeks.org/python-pandas-df-size-df-shape-and-df-ndim/
