@@ -24,7 +24,7 @@ import serial.tools.list_ports
 import pandas as pd
 import re
 
-
+############################  CHANGE THESE  #################################
 """
 Record the distances between the fingers, then replace these values
 """
@@ -33,8 +33,8 @@ thumbToIndex    = 7
 indexToPinky    = 5
 
 #Its best to  have them both on or both off
-writeToExcel    = 1            #If this is 1, the program will Write to an excel file    
-yesAnimate      = 1             #If this is 1, the program will output an animation
+writeToExcel    = 0             #If this is 1, the program will Write to an excel file    
+yesAnimate      = 0             #If this is 1, the program will output an animation
 
 autoDetectDevice = 1
 
@@ -46,7 +46,7 @@ Returns coordinates of a 3 finger system given the distances between 3 fingers
 """
 def returnCoordinates(thumbToPinky, thumbToIndex,indexToPinky):
     sideB = indexToPinky
-    sideA = thumbToIndex    #A
+    sideA = thumbToIndex    
     sideC = thumbToPinky
 
     pinkyAngle = math.degrees(math.acos( ((sideC**2 + sideB**2) - sideA**2) / (2 * sideC * sideB)  ))
@@ -61,16 +61,20 @@ def returnCoordinates(thumbToPinky, thumbToIndex,indexToPinky):
     #print("Height is "+ str(verticalLength))
     bottomTriangle = 180-90-pinkyAngle
     #print("Top Triangle Angle : "+str(bottomTriangle)  )
-    bottomLeftLength = math.cos(math.radians(pinkyAngle))*thumbToPinky
-    #print("Bottom Left Length  : "+str(bottomLeftLength)  )
-    bottomRightLength = math.cos(math.radians(indexAngle))*thumbToIndex
-    #print("Bottom right length : "+str(bottomRightLength)  )
+
+    print("Top Triangle Angle : "+str(bottomTriangle)  )
+
+    bottomLeftLength = math.cos(math.radians(indexAngle))*thumbToIndex
+    print("Bottom right length : "+str(bottomLeftLength)  )
+    bottomRightLength = math.cos(math.radians(pinkyAngle))*thumbToPinky
+    print("Bottom Left Length  : "+str(bottomRightLength)  )
+    
 
     #pinkyCoordinate = (1 ,   1 )
     indexCoord = (1 ,   1 )
     pinkyCoordinate  =   (round(indexCoord[0] +indexToPinky,2),indexCoord[1])
+    #thumbCoord  =   (round(indexCoord[0] +bottomLeftLength,2)   ,    round(indexCoord[1] + verticalLength,2))
     thumbCoord  =   (round(indexCoord[0] +bottomLeftLength,2)   ,    round(indexCoord[1] + verticalLength,2))
-    
     return (pinkyCoordinate, indexCoord,thumbCoord)
 
 

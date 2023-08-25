@@ -3,3 +3,4 @@ Serial Comunication, python to arduino
 https://www.youtube.com/watch?v=z14l33paZGU&t=663s&ab_channel=WaveShapePlay
 
 ChatGPT
+
